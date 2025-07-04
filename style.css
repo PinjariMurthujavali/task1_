@@ -1,0 +1,93 @@
+/* Reset default browser styles and set global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Full-screen background with gradient and centering */
+body {
+  background: linear-gradient(to right top, #6a11cb, #2575fc); /* Purple to blue gradient */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+}
+
+/* Main container styling */
+.container {
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Soft shadow */
+}
+
+/* Layout for calculator content */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Display screen of the calculator */
+#display {
+  width: 260px;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent white */
+  color: #fff; /* Text color */
+}
+
+/* Style for display placeholder text */
+#display::placeholder {
+  color: #eee;
+}
+
+/* Grid layout for calculator buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px); /* 4 columns of 60px each */
+  gap: 15px; /* Space between buttons */
+}
+
+/* Common button styling */
+button {
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  cursor: pointer;
+  transition: all 0.2s ease; /* Smooth hover effect */
+  backdrop-filter: blur(10px); /* Blur behind buttons */
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for the "0" button to span two columns */
+.zero {
+  grid-column: span 2;
+  width: 135px;
+}
+
+/* Style for the clear ("C") button */
+.clear {
+  background: #ff5e5e; /* Red */
+}
+
+/* Style for the equals ("=") button */
+.equal {
+  background: #28c76f; /* Green */
+}

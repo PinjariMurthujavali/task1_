@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8">
+  <!-- Ensure proper rendering and touch zooming on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title of the web page -->
+  <title>Beautiful Calculator</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main container for the calculator -->
+  <div class="container">
+
+    <!-- Heading of the calculator -->
+    <h1 style="text-align:center">Calculator</h1>
+
+    <!-- Calculator wrapper -->
+    <div class="calculator">
+
+      <!-- Display screen of the calculator -->
+      <input type="text" id="display" disabled placeholder="0" />
+
+      <!-- Buttons container -->
+      <div class="buttons">
+        
+        <!-- Functional buttons -->
+        <button onclick="clearDisplay()" class="clear">C</button> <!-- Clear display -->
+        <button onclick="appendValue('/')">÷</button> <!-- Divide -->
+        <button onclick="appendValue('*')">×</button> <!-- Multiply -->
+        <button onclick="appendValue('-')">−</button> <!-- Subtract -->
+
+        <!-- Number and operator buttons -->
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('+')">+</button> <!-- Add -->
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="calculateResult()" class="equal">=</button> <!-- Equals -->
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendValue('.')">.</button> <!-- Decimal point -->
+
+        <!-- Zero button spanning full row -->
+        <button onclick="appendValue('0')" class="zero">0</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
